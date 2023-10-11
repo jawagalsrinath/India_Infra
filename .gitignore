@@ -42,4 +42,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-background_video.mp4
+
+#file for background-video
+assets/background_video.mp4
