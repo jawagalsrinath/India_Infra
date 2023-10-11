@@ -1,3 +1,4 @@
+import 'package:falcon_shop/sign_in_page.dart';
 import 'package:flutter/material.dart';
 import 'home_page.dart';
 import 'login_register_page.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primaryColor: Colors.brown[800], // Choco brown
-        scaffoldBackgroundColor: Color.fromRGBO(131, 119, 119, 23),
+        scaffoldBackgroundColor: Colors.black,
         textTheme: TextTheme(
           bodyText1: TextStyle(color: Colors.white), // Text color
         ),
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/welcome': (context) => WelcomePage(),
         '/home': (context) => HomePage(),
+        '/sign': (context) => SignInPage(),
         '/login': (context) => LoginRegisterPage(),
         '/shop': (context) => ShoppingPage(),  // Assuming this is a different page from ShoppingPage
         '/cart': (context) => CartPage(productDetails: ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>? ?? null),

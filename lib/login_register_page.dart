@@ -7,8 +7,8 @@ class LoginRegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
-        backgroundColor: Colors.brown[800], // Choco brown
+        title: Text('Login',style:TextStyle(color: Colors.deepOrangeAccent,)),
+        backgroundColor: Colors.black, // Choco brown
         actions: [
           IconButton(
             icon: Icon(FontAwesomeIcons.user),
@@ -17,11 +17,14 @@ class LoginRegisterPage extends StatelessWidget {
             },
           ),
         ],
+        iconTheme: IconThemeData(
+          color: Colors.deepOrangeAccent, // Change the color here
+        ),
       ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/login_background.jpg'), // Add your background image path
+            image: AssetImage('assets/login_background2.jpg'), // Add your background image path
             fit: BoxFit.cover,
           ),
         ),
@@ -70,9 +73,13 @@ class LoginRegisterPage extends StatelessWidget {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.brown[800], // Choco brown
+                    primary: Colors.deepOrangeAccent,
+                    minimumSize: Size(130, 40),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),// Choco brown
                   ),
-                  child: Text('Login'),
+                  child: Text('Login', style: TextStyle(fontSize: 20),),
                 ),
                 SizedBox(height: 10),
                 TextButton(
@@ -82,7 +89,7 @@ class LoginRegisterPage extends StatelessWidget {
                   style: TextButton.styleFrom(
                     primary: Colors.white, // Set text color
                   ),
-                  child: Text('Register'),
+                  child: Text('Register',style: TextStyle(fontSize: 20),),
                 ),
               ],
             ),
