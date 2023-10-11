@@ -12,8 +12,30 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FALCON SHOPPER'),
-        backgroundColor: Colors.brown[800],
+        title: Row(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(150), // Adjust the radius as needed
+              child: Image.asset(
+                'assets/logo_ind.png',
+                height: 50,
+              ),
+            ),
+            SizedBox(width: 10), // Add some spacing between the logo and text
+            Text(
+              'INDIA INFRA',
+              style: TextStyle(
+                color: Colors.deepOrangeAccent,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+        iconTheme: IconThemeData(
+          color: Colors.deepOrangeAccent, // Change the color of the leading icon (if present)
+        ),
+        backgroundColor: Colors.black,
         automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
@@ -26,14 +48,14 @@ class HomePage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Text(
-                '#Deals Today', // Add the text here
-                style: TextStyle(fontSize: 45,fontFamily: AutofillHints.streetAddressLevel4, fontWeight: FontWeight.bold,color: Colors.white),
+                '#ConstructionZone', // Add the text here
+                style: TextStyle(fontSize: 35,fontFamily: AutofillHints.streetAddressLevel4, fontWeight: FontWeight.bold,color: Colors.white),
               ),
             ),
             ListView.builder(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
-              itemCount: 5,
+              itemCount: 3,
               itemBuilder: (BuildContext context, int index) {
                 return Column(
                   children: <Widget>[
@@ -45,7 +67,7 @@ class HomePage extends StatelessWidget {
                             width: 300,
                             height: 300,
                             child: CircleAvatar(
-                              radius: 150,
+                              radius: 50,
                               backgroundImage: AssetImage(
                                 'assets/product${index + 1}.jpg',
                               ),
@@ -53,12 +75,12 @@ class HomePage extends StatelessWidget {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Printed Fashion',
+                            'an INDIA INFRA product',
                             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Artistic models in premium',
+                            'an INDIA INFRA product',
                             textAlign: TextAlign.center,
                           ),
                           SizedBox(height: 10),
@@ -79,7 +101,7 @@ class HomePage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Text(
-                '#falcon_2023 DEAL FOR PREMIUM', // Add the text here
+                '#India_Infra DEAL FOR PREMIUM', // Add the text here
                 style: TextStyle(fontSize: 15,fontFamily: AutofillHints.streetAddressLevel4, fontWeight: FontWeight.bold,color: Colors.white),
               ),
             ),
@@ -89,6 +111,8 @@ class HomePage extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
+        selectedItemColor: Colors.deepOrangeAccent,
+        unselectedItemColor: Colors.deepOrangeAccent,
         onTap: (index) {
           if (index == 1) {
             _navigateToShop(context);
@@ -101,22 +125,22 @@ class HomePage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Colors.brown[800],
+            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),
             label: 'Shop',
-            backgroundColor: Colors.brown[800],
+            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_basket),
             label: 'Cart',
-            backgroundColor: Colors.brown[800],
+            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.logout),
             label: 'Logout',
-            backgroundColor: Colors.brown[800],
+            backgroundColor: Colors.black,
           ),
         ],
       ),
