@@ -5,6 +5,8 @@ import 'login_register_page.dart';
 import 'shopping_page.dart';
 import 'welcome_page.dart';
 import 'cart_page.dart';
+import 'plumbing_piping.dart';
+import 'tiling_painting.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/welcome': (context) => WelcomePage(),
         '/home': (context) => HomePage(),
+        '/plumbing_piping': (context) => PlumbingPiping(),
+        '/tiling_painting': (context) => TilingPainting(),
         '/sign': (context) => SignInPage(),
         '/login': (context) => LoginRegisterPage(),
         '/shop': (context) => ShoppingPage(),  // Assuming this is a different page from ShoppingPage

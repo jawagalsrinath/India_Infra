@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import "login_register_page.dart";
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class SignInPage extends StatelessWidget {
       body:Container(
             decoration: BoxDecoration(
             image: DecorationImage(
-            image: AssetImage('assets/ind_smpl3.jpg'), // Add your background image path
+            image: AssetImage('assets/ind_smpl4.jpg'), // Add your background image path
             fit: BoxFit.cover,
             ),
           ),
@@ -33,18 +33,34 @@ class SignInPage extends StatelessWidget {
                   ),
                 ),
               SizedBox(height: 20),
-              TextFormField(
+              TextField(
+                style: TextStyle(color: Colors.white), // Set text color
                 decoration: InputDecoration(
-                  labelText: 'Email',
-                  border: OutlineInputBorder(),
+                  labelText: 'Username',
+                  labelStyle: TextStyle(color: Colors.white), // Set label color
+                  prefixIcon: Icon(FontAwesomeIcons.user, color: Colors.white), // Set icon color
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white), // Set border color
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white), // Set focused border color
+                  ),
                 ),
               ),
               SizedBox(height: 20),
-              TextFormField(
-                obscureText: true, // for password fields
+              TextField(
+                obscureText: true,
+                style: TextStyle(color: Colors.white), // Set text color
                 decoration: InputDecoration(
                   labelText: 'Password',
-                  border: OutlineInputBorder(),
+                  labelStyle: TextStyle(color: Colors.white), // Set label color
+                  prefixIcon: Icon(FontAwesomeIcons.lock, color: Colors.white), // Set icon color
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white), // Set border color
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white), // Set focused border color
+                  ),
                 ),
               ),
               SizedBox(height: 30),

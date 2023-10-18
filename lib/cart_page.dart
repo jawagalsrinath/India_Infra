@@ -118,3 +118,11 @@ class CartPage extends StatelessWidget {
   }
 }
 
+//child: Container(
+//           decoration: BoxDecoration(
+//             color: Colors.white.withOpacity(0.2), // Adjust the opacity for the glass effect
+//             image: DecorationImage(
+//               image: AssetImage('assets/background_image.jpg'), // Add your background image path here
+//               fit: BoxFit.cover,
+//             ),
+//           ),

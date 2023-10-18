@@ -41,7 +41,9 @@ class ShoppingPage extends StatelessWidget {
         backgroundColor: Colors.black,
         automaticallyImplyLeading: false,
       ),
-      body: SingleChildScrollView(
+      body:Container(
+      color: Color.fromRGBO(65, 65, 65, 1),
+      child:SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Image.asset(
@@ -51,8 +53,8 @@ class ShoppingPage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Text(
-                '#Shop Now', // Add the text here
-                style: TextStyle(fontSize: 45,fontFamily: AutofillHints.streetAddressLevel4, fontWeight: FontWeight.bold,color: Colors.white),
+                '#Cements and Steels', // Add the text here
+                style: TextStyle(fontSize: 25,fontFamily: AutofillHints.streetAddressLevel4, fontWeight: FontWeight.bold,color: Colors.white),
               ),
             ),
             ListView.builder(
@@ -83,12 +85,12 @@ class ShoppingPage extends StatelessWidget {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'an INDIA INFRA product',
+                            'an INDIAN INFRA product',
                             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'an INDIA INFRA product',
+                            'an INDIAN INFRA product',
                             textAlign: TextAlign.center,
                           ),
                           SizedBox(height: 10),
@@ -106,17 +108,134 @@ class ShoppingPage extends StatelessWidget {
                   ],
                 );
               },
+            ),Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Text(
+                '#Plumbing and Piping', // Add the text here
+                style: TextStyle(fontSize: 25,fontFamily: AutofillHints.streetAddressLevel4, fontWeight: FontWeight.bold,color: Colors.white),
+              ),
+            ),
+            ListView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: 3,
+              itemBuilder: (BuildContext context, int index) {
+                return Column(
+                  children: <Widget>[
+                    Card(
+                      margin: EdgeInsets.all(8.0),
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            width: 300,
+                            height: 300,
+                            child: CircleAvatar(
+                              radius: 150,
+                              backgroundImage: AssetImage(
+                                'assets/pp_pr${index + 1}.png',
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            "Rs 1500",
+                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'an INDIAN INFRA product',
+                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'an INDIAN INFRA product',
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(height: 10),
+                          ElevatedButton(
+                            onPressed: () {
+                              _addToCart(context, 'an INDIA INFRA product', 1500,'assets/pp_pr${index + 1}.png');
+                            },
+                            child: Text('Add To Cart'),
+                          ),
+
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20), // Add some space between each product
+                  ],
+                );
+              },
+            ),Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Text(
+                '#Tiling and Painting', // Add the text here
+                style: TextStyle(fontSize: 25,fontFamily: AutofillHints.streetAddressLevel4, fontWeight: FontWeight.bold,color: Colors.white),
+              ),
+            ),
+            ListView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: 2,
+              itemBuilder: (BuildContext context, int index) {
+                return Column(
+                  children: <Widget>[
+                    Card(
+                      margin: EdgeInsets.all(8.0),
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            width: 300,
+                            height: 300,
+                            child: CircleAvatar(
+                              radius: 150,
+                              backgroundImage: AssetImage(
+                                'assets/tt_pr${index + 1}.png',
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            "Rs 1500",
+                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'an INDIAN INFRA product',
+                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'an INDIAN INFRA product',
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(height: 10),
+                          ElevatedButton(
+                            onPressed: () {
+                              _addToCart(context, 'an INDIA INFRA product', 1500,'assets/tt_pr${index + 1}.png');
+                            },
+                            child: Text('Add To Cart'),
+                          ),
+
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20), // Add some space between each product
+                  ],
+                );
+              },
             ),
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Text(
-                '#India_Infra DEAL FOR PREMIUM', // Add the text here
+                '#Indian_Infra DEAL FOR PREMIUM', // Add the text here
                 style: TextStyle(fontSize: 15,fontFamily: AutofillHints.streetAddressLevel4, fontWeight: FontWeight.bold,color: Colors.white),
               ),
             ),
 
           ],
         ),
+      ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 1,

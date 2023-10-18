@@ -60,7 +60,7 @@ class _WelcomePageState extends State<WelcomePage> {
               ),
               SizedBox(height: 20),
               Text(
-                "INDIA INFRA",
+                "INDIAN INFRA",
                 style: TextStyle(
                   fontSize: 50,
                   fontWeight: FontWeight.bold,
